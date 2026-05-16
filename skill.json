@@ -1,0 +1,85 @@
+{
+  "name": "EZTeach",
+  "version": "2.0.0",
+  "description": "智能教学文档生成AI Skill - PPT解析、模板适配、教案/学习单自动生成",
+  "author": "EZTeach Team",
+  "category": "education",
+  "tags": ["teaching", "ppt", "word", "markdown", "document", "lesson-plan"],
+  
+  "entry": {
+    "main": "scripts/ezteach_main.py",
+    "mode": "python"
+  },
+  
+  "commands": {
+    "full": {
+      "description": "完整工作流：PPT提取 + 模板适配 + 文档生成",
+      "script": "scripts/ezteach_main.py",
+      "args": ["--mode", "full"]
+    },
+    "ppt": {
+      "description": "仅提取PPT内容",
+      "script": "scripts/ezteach_main.py",
+      "args": ["--mode", "ppt"]
+    },
+    "convert": {
+      "description": "格式转换：Word↔Markdown",
+      "script": "scripts/ezteach_main.py",
+      "args": ["--mode", "convert"]
+    },
+    "batch": {
+      "description": "批量处理",
+      "script": "scripts/ezteach_main.py",
+      "args": ["--mode", "batch"]
+    },
+    "status": {
+      "description": "检查系统状态",
+      "script": "scripts/ezteach_main.py",
+      "args": ["--mode", "status"]
+    }
+  },
+  
+  "modules": {
+    "ppt_processor": "scripts/ppt_processor.py",
+    "sdm_converter": "scripts/sdm_converter.py",
+    "template_adapter": "scripts/template_adapter.py",
+    "doc_generator": "scripts/doc_generator.py"
+  },
+  
+  "prompts": {
+    "system": "prompts/system_prompt.txt",
+    "content_generation": "prompts/content_generation.txt",
+    "template_mapping": "prompts/template_mapping.txt"
+  },
+  
+  "docs": {
+    "usage": "docs/SKILL.md",
+    "development": "docs/DEVELOP.md",
+    "configuration": "docs/CONFIG.md"
+  },
+  
+  "requirements": "requirements.txt",
+  
+  "capabilities": [
+    "PPT内容提取",
+    "PPT动画窗格解析",
+    "PPT转PDF",
+    "Word转Markdown",
+    "Markdown转Word",
+    "模板结构解析",
+    "占位符识别与替换",
+    "格式语义捕获",
+    "教案自动生成",
+    "学习单自动生成",
+    "批量处理"
+  ],
+  
+  "constraints": [
+    "所有文件操作由脚本完成，AI仅负责语义内容生成",
+    "技能包内不包含任何测试输出文件",
+    "不依赖人工干预，一键自动化流程"
+  ],
+  
+  "min_python_version": "3.8",
+  "max_python_version": "3.12"
+}

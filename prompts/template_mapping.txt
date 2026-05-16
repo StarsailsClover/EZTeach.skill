@@ -1,0 +1,47 @@
+# EZTeach 模板映射提示词
+
+## 任务
+将生成的教学内容映射到教案模板的对应位置。
+
+## 模板结构分析
+- 模板章节：{{TEMPLATE_SECTIONS}}
+- 占位符列表：{{PLACEHOLDERS}}
+- 样式信息：{{STYLE_INFO}}
+
+## 内容映射规则
+
+### 1. 标题映射
+- `{{TITLE}}` → 课程标题
+- `{{SUBTITLE}}` → 副标题（如：第X课时）
+
+### 2. 基本信息映射
+- `{{SUBJECT}}` → 学科
+- `{{GRADE}}` → 年级
+- `{{TEACHER}}` → 授课教师
+- `{{DATE}}` → 授课日期
+- `{{PERIOD}}` → 课时
+
+### 3. 教学目标映射
+- `{{TEACHING_OBJECTIVES}}` → 完整的三维教学目标
+- `{{KNOWLEDGE_OBJECTIVE}}` → 知识与技能目标
+- `{{ABILITY_OBJECTIVE}}` → 过程与方法目标
+- `{{EMOTION_OBJECTIVE}}` → 情感态度与价值观
+
+### 4. 教学重难点映射
+- `{{KEY_POINTS}}` → 教学重点
+- `{{DIFFICULT_POINTS}}` → 教学难点
+
+### 5. 教学过程映射
+- `{{TEACHING_PROCESS}}` → 完整教学过程
+- `{{STEP_1}}` - `{{STEP_8}}` → 各教学环节
+
+### 6. 其他映射
+- `{{BLACKBOARD_DESIGN}}` → 板书设计
+- `{{HOMEWORK}}` → 作业布置
+- `{{REFLECTION}}` → 教学反思
+
+## 重要原则
+1. 严格保持模板原有格式和样式
+2. 占位符替换要完整，不遗漏
+3. 内容长度要适配模板空间
+4. 特殊格式（表格、列表）要正确转换

@@ -1,0 +1,52 @@
+# EZTeach 内容生成提示词
+
+## 任务
+基于以下PPT课件内容，生成完整的教案数据JSON。
+
+## 输入
+- PPT标题：{{PPT_TITLE}}
+- PPT大纲：{{PPT_OUTLINE}}
+- PPT内容摘要：{{PPT_CONTENT}}
+- 学科：{{SUBJECT}}
+- 年级：{{GRADE}}
+- 课时：{{PERIOD}}
+
+## 输出格式
+```json
+{
+  "title": "课程标题",
+  "basic_info": {
+    "subject": "学科",
+    "grade": "年级",
+    "period": "第X课时",
+    "teacher": "",
+    "type": "新授课"
+  },
+  "teaching_objectives": [
+    "知识与技能目标：...",
+    "过程与方法目标：...",
+    "情感态度与价值观：..."
+  ],
+  "key_points": "教学重点描述",
+  "difficult_points": "教学难点描述",
+  "preparation": "教学准备",
+  "teaching_process": [
+    {
+      "title": "环节一标题",
+      "content": "详细内容",
+      "activity": "师生活动设计",
+      "time": "5分钟"
+    }
+  ],
+  "blackboard_design": "板书设计内容",
+  "homework": ["作业1", "作业2"],
+  "reflection": "教学反思"
+}
+```
+
+## 要求
+1. 教学目标分三维目标撰写
+2. 教学过程分6-8个环节，每个环节有明确的时间分配
+3. 重点难点要准确对应课程内容
+4. 作业布置要有层次性
+5. 所有内容要符合对应学段的教学要求
